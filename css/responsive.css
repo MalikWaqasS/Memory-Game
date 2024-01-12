@@ -1,0 +1,266 @@
+/* Added Responsiveness For 320px Viewport Width */
+@media screen and (min-width: 320px) {
+	#nav-bar {
+		height: 40px;
+		width: 100%;
+	}
+	
+	.udacity-logo-nav {
+		height: 30px;
+	}
+	
+	.heading {
+		font-size: small;
+	}
+	
+	.score-panel {
+		width: 288px;
+		margin: 0 auto 0 auto;
+	}
+	
+	.time-counter {
+		margin: 0 0 0 90px;
+	}
+	
+	.deck {
+		width: 304px;
+		margin: 10px auto 0 auto;
+		min-height: 304px;
+		padding: 15px;
+	}
+	
+	.deck .card {
+		height: 55px;
+		width: 55px;
+	}
+
+	.deck .card.show {
+		font-size: 20px;
+	}
+
+	.deck .card.match {
+		font-size: 20px;
+	}
+
+	.deck .card.fail {
+		font-size: 20px;	
+	}
+
+	.message {
+		width: 250px;
+		height: 275px;
+		margin: 50px 0 0 0;
+	}
+
+	.message img {
+		height: 130px;
+		margin: 10px 0 10px 10px;
+	}
+
+	.cMessage {
+		font-size: 12px;
+	}
+
+	.cButtons {
+		margin: 10px 0 26px 0;
+	}
+
+	.message button {
+		padding: 5px 10px 5px 10px;
+	}
+
+	.copyright {
+		font-size: small;
+	}
+}
+
+/* Added Responsiveness For 375px Viewport Width */
+@media screen and (min-width: 375px) {
+	.copyright {
+		font-size: medium;
+	}
+}
+
+/* Added Responsiveness For 425px Viewport Width */
+@media screen and (min-width: 425px) {
+	.deck {
+		width: 350px;
+		min-height: 350px;
+		padding: 20px;
+	}
+
+	.message {
+		width: 320px;
+		height: 320px;
+		margin: 50px 0 0 0;
+	}
+
+	.message img {
+		height: 170px;
+	}
+
+	.cMessage {
+		font-size: 15px;
+	}
+
+	.message button {
+		padding: 10px 10px 10px 10px;
+	}
+	
+	.deck .card {
+		height: 65px;
+		width: 65px;
+	}
+
+	.deck .card.show {
+		font-size: 23px;
+	}
+
+	.deck .card.match {
+		font-size: 23px;
+	}
+
+	.deck .card.fail {
+		font-size: 23px;	
+	}
+}
+
+/* Added Responsiveness For 768px Viewport Width */
+@media screen and (min-width: 768px) {
+	#nav-bar {
+		height: 50px;
+	}
+	
+	.udacity-logo-nav {
+		height: 40px;
+	}
+
+	.heading {
+		font-size: medium;
+	}
+
+	.score-panel {
+		width: 400px;
+		font-size: large;
+		margin: 0 auto 0 auto;
+	}
+
+	.time-counter {
+		margin: 0 0 0 175px;
+	}
+
+	.deck {
+		width: 600px;
+		min-height: 600px;
+		padding: 30px;
+	}
+
+	.deck .card {
+		height: 110px;
+		width: 110px;
+	}
+
+	.deck .card.show {
+		font-size: 30px;
+	}
+
+	.deck .card.match {
+		font-size: 30px;
+	}
+
+	.deck .card.fail {
+		font-size: 30px;	
+	}
+
+	.cStar {
+		font-size: x-large;
+	}
+
+	.message {
+		width: 500px;
+		height: 430px;
+		margin: 60px 0 0 0;
+	}
+
+	.message img {
+		height: 270px;
+	}
+
+	.cMessage {
+		font-size: 20px;
+	}
+
+	.copyright {
+		font-size: larger;
+	}
+}
+
+/* Added Responsiveness For 1440px Viewport Width */
+@media screen and (min-width: 1440px) {
+	#nav-bar {
+		height: 60px;
+	}
+	
+	.udacity-logo-nav {
+		height: 50px;
+	}
+
+	.heading {
+		font-size: larger;
+	}
+
+	.score-panel {
+		width: 450px;
+		font-size: x-large;
+		margin: 0 auto 0 auto;
+	}
+
+	.time-counter {
+		margin: 0 0 0 160px;
+	}
+
+	.deck {
+		width: 660px;
+		min-height: 680px;
+		padding: 30px;
+	}
+
+	.deck .card {
+		height: 125px;
+		width: 125px;
+	}
+
+	.deck .card.show {
+		font-size: 35px;
+	}
+
+	.deck .card.match {
+		font-size: 35px;
+	}
+
+	.deck .card.fail {
+		font-size: 35px;	
+	}
+
+	.cStar {
+		font-size: xx-large;
+	}
+
+	.message {
+		width: 500px;
+		height: 450px;
+		margin: 70px 0 0 0;
+	}
+
+	.message img {
+		height: 270px;
+	}
+
+	.cMessage {
+		font-size: 20px;
+	}
+
+	.copyright {
+		font-size: x-large;
+	}
+}

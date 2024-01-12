@@ -1,0 +1,364 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
+	font-family: 'Coda', cursive;
+}
+
+
+/* Styles for navigation bar */
+#nav-bar {
+	background-color: #fff;
+	text-align: center;
+	height: 60px;
+	padding: 5px 0 5px 0;
+	box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2);
+}
+
+.udacity-logo-nav {
+	height: 50px;
+}
+
+/* Page styling */
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+/* Styles for heading */
+.heading,
+.score-panel {
+	animation: fadeIn 1s;
+}
+
+h1 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+}
+
+/* Styles for score panel */
+.score-panel {
+	text-align: left;
+	width: 345px;
+	margin-bottom: 10px;
+}
+
+.score-panel .stars {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	margin: 0 5px 0 0;
+}
+
+.score-panel .stars li {
+	list-style: none;
+	display: inline-block;
+}
+
+.score-panel .restart {
+	float: right;
+	cursor: pointer;
+}
+
+.time-counter {
+	display: inline;
+	margin: 0 0 0 150px;
+}
+
+/* Styles for deck of cards */
+.deck {
+	width: 660px;
+	min-height: 680px;
+	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background-size: 700% 700%;
+	padding: 32px;
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	animation: gradient 78s ease infinite, pulse 0.4s;
+}
+
+.deck .card {
+	height: 125px;
+	width: 125px;
+	background: #2e3d49;
+	font-size: 0;
+	color: #ffffff;
+	border-radius: 8px;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0px 0px 24px 2px rgba(0,0,0,0.4);
+}
+
+.deck .card.open {
+	transform: rotateY(0);
+	animation: bounceIn 0.5s;
+	background: #02b3e4;
+	cursor: default;
+}
+
+.deck .card.show {
+	font-size: 33px;
+}
+
+.deck .card.match {
+	cursor: default;
+	background: #02ccba;
+	animation: tada 0.8s;
+	font-size: 33px;
+}
+
+.deck .card.fail {
+	cursor: default;
+	background: #d80f0f;
+	animation: wobble 0.65s;
+	font-size: 33px;	
+}
+
+/* Congratulations message styling */
+.message {
+	display: none;
+	position: absolute;
+	margin: 0 auto 0 auto;
+	background-color: #fff;
+	width: 500px;
+	border-radius: 20px;
+	box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);
+	animation: bounceIn 0.8s;
+}
+
+.cStars {
+	text-align: center;
+	padding: 0;
+	margin: 10px 0 0 0;
+}
+
+.cStar {
+	list-style-type: none;
+	display: inline-block;
+}
+
+.cStar .fa {
+	color: yellow;
+}
+
+.message img {
+	height: 250px;
+	margin: 10px 0 26px 26px;
+}
+
+.cMessage {
+	text-align: center;
+	font-size: 1.2em;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: bold;
+}
+
+.cButtons {
+	text-align: center;
+	margin: 10px 0 26px 0;
+}
+
+.message button {
+	padding: 10px 10px 10px 10px;
+	margin: 0 10px 0 10px;
+}
+
+.cPlay,
+.cClose {
+	border: none;
+	color: #fff;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.cPlay {
+	background-color: #008CBA;
+}
+
+.cClose {
+	background-color: #f44336;
+}
+
+/* Styles for copyright */
+.copyright {
+	width: 93%;
+	font-size: 1.1em;
+	text-align: center;
+	margin: 20px auto 0 auto;
+	animation: pulse 0.65s infinite;
+}
+
+.copyright a {
+	text-decoration: none;
+	color: #000;
+}
+
+.copyright h4 {
+	font-style: bold;
+	margin: 0 0;
+}
+
+/* Disable pointer events */
+.disable {
+	pointer-events: none;
+}
+
+/* Animations */
+@keyframes bounceIn {
+	from,
+	20%,
+	40%,
+	60%,
+	80%,
+	to {
+		animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+	}
+
+	0% {
+		opacity: 0;
+		transform: scale3d(0.3, 0.3, 0.3);
+	}
+
+	20% {
+		transform: scale3d(1.1, 1.1, 1.1);
+	}
+
+	40% {
+		transform: scale3d(0.9, 0.9, 0.9);
+	}
+
+	60% {
+		opacity: 1;
+		transform: scale3d(1.03, 1.03, 1.03);
+	}
+
+	80% {
+		transform: scale3d(0.97, 0.97, 0.97);
+	}
+
+	to {
+		opacity: 1;
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes pulse {
+	from {
+		-webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+
+	50% {
+		-webkit-transform: scale3d(1.05, 1.05, 1.05);
+		transform: scale3d(1.05, 1.05, 1.05);
+	}
+
+	to {
+		-webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+@keyframes tada {
+	from {
+		transform: scale3d(1, 1, 1);
+	}
+
+	10%,
+	20% {
+		transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+	}
+
+	30%,
+	50%,
+	70%,
+	90% {
+		transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+	}
+
+	40%,
+	60%,
+	80% {
+		transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+	}
+
+	to {
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+@keyframes wobble {
+	from {
+		transform: translate3d(0, 0, 0);
+	}
+
+	15% {
+		transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+	}
+
+	30% {
+		transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+	}
+
+	45% {
+		transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+	}
+
+	60% {
+		transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+	}
+
+	75% {
+		transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+	}
+
+	to {
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
